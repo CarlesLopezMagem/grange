@@ -46,9 +46,7 @@ export class RESTAPIResolver extends Resolver {
     }
 }
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class GrangeViews {
     constructor(private grange: Grange) {}
 

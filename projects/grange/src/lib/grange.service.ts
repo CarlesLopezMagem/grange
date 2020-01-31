@@ -5,9 +5,7 @@ import { GrangeCore } from 'grange-core';
 import { GrangeState } from './state';
 import { PastanagaService } from 'pastanaga-angular';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class Grange {
 
     constructor(
