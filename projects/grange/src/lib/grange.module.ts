@@ -54,7 +54,7 @@ const COMPONENTS = [
         StateTraverserModule,
         GrangeFormModule,
         TraversalModule,
-        GrangeCoreModule.forRoot(),
+        GrangeCoreModule,
         GrangeStateModule,
         TextFieldModule,
         ButtonModule,
@@ -78,7 +78,6 @@ export class GrangeRootModule {
         return {
             ngModule: GrangeModule,
             providers: [
-                Traverser,
                 GrangeViews,
                 Grange,
                 PastanagaService,
