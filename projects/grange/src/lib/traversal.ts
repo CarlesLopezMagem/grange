@@ -69,7 +69,9 @@ export class FullPathNormalizer extends Normalizer {
 
     normalize(path: string): string {
         if (path) {
-            const base = this.config.get('BACKEND_URL');
+            let base: string = this.config.get('BACKEND_URL');
+            base = base.replace('http://', '').replace('https://', '');
+            path = path.replace('http://', '').replace('https://', '');
             if (base.startsWith('/') && path.startsWith('http')) {
                 path = '/' + path.split('/').slice(3).join('/');
             }
