@@ -14,11 +14,10 @@ export class Grange {
         public store: Store<GrangeState>,
         public ui: PastanagaService,
     ) {
+    }
+
+    public initialize() {
+        this.traverser.init();
         this.store.dispatch({ type: '[Traversing] Watch'});
-        this.core.auth.isAuthenticated.subscribe(auth => {
-            if (!auth.state) {
-                this.traverser.traverse('./@@login');
-            }
-        });
     }
 }
