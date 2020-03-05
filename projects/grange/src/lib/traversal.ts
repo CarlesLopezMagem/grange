@@ -3,12 +3,6 @@ import { Marker, Normalizer, Resolver } from 'angular-traversal';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { APIService, ResourceService, Error, ConfigurationService} from 'grange-core';
-import { Grange } from './grange.service';
-import { AddView } from './views/add';
-import { LoginView } from './views/login';
-import { ViewView } from './views/view';
-import { EditView } from './views/edit';
-import { FolderView } from './views/folder';
 
 @Injectable()
 export class InterfaceMarker extends Marker {
@@ -46,18 +40,6 @@ export class RESTAPIResolver extends Resolver {
     }
 }
 
-@Injectable()
-export class GrangeViews {
-    constructor(private grange: Grange) {}
-
-    initialize() {
-        this.grange.traverser.addView('add', 'folderish', AddView);
-        this.grange.traverser.addView('edit', '*', EditView);
-        this.grange.traverser.addView('login', '*', LoginView);
-        this.grange.traverser.addView('view', '*', ViewView);
-        this.grange.traverser.addView('view', 'folderish', FolderView);
-    }
-}
 
 @Injectable()
 export class FullPathNormalizer extends Normalizer {

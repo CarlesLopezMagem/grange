@@ -13,10 +13,7 @@ import { Grange } from './grange.service';
     imports: [
         HttpClientModule,
         StateTraverserModule,
-        // TraversalModule,
-        // GrangeCoreModule,
         GrangeStateModule,
-        // SchemaFormModule.forRoot(),
     ],
     exports: [
     ]
