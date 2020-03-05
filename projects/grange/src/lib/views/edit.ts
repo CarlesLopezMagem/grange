@@ -45,7 +45,7 @@ export class EditView extends BaseView implements OnInit {
                 fields: [],
             }];
 
-           
+
             // move behavior fields in main schema
             schema = this.flattenSchema(schema);
 

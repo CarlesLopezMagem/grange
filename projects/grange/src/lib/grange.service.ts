@@ -3,7 +3,6 @@ import { Store } from '@ngrx/store';
 import { Traverser } from 'angular-traversal';
 import { GrangeCore } from 'grange-core';
 import { GrangeState } from './state';
-import { PastanagaService } from 'pastanaga-angular';
 
 @Injectable()
 export class Grange {
@@ -12,7 +11,6 @@ export class Grange {
         public traverser: Traverser,
         public core: GrangeCore,
         public store: Store<GrangeState>,
-        public ui: PastanagaService,
     ) {
     }
 
